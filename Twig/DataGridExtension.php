@@ -31,7 +31,7 @@ class DataGridExtension extends \Twig_Extension implements \Twig_Extension_Globa
     const DEFAULT_TEMPLATE = 'APYDataGridBundle::blocks.html.twig';
 
     /**
-     * @var \Twig_TemplateInterface[]
+     * @var \Twig_Template[]
      */
     protected $templates = array();
 
@@ -377,7 +377,7 @@ class DataGridExtension extends \Twig_Extension implements \Twig_Extension_Globa
     protected function renderBlock(\Twig_Environment $environment, $name, $parameters)
     {
         foreach ($this->getTemplates($environment) as $template) {
-            if ($template->hasBlock($name)) {
+            if ($template->hasBlock($name, [], [])) {
                 return $template->renderBlock($name, array_merge($environment->getGlobals(), $parameters, $this->params));
             }
         }
@@ -396,7 +396,7 @@ class DataGridExtension extends \Twig_Extension implements \Twig_Extension_Globa
     protected function hasBlock(\Twig_Environment $environment, $name)
     {
         foreach ($this->getTemplates($environment) as $template) {
-            if ($template->hasBlock($name)) {
+            if ($template->hasBlock($name, [], [])) {
                 return true;
             }
         }
