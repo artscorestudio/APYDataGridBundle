@@ -15,9 +15,9 @@ $grid->setRouteUrl($routeUrl);
 ```
 ## Method parameters
 
-|parameter|Type|Default value|Description|
-|:--:|:--|:--|:--|
-|routeUrl|string|_none_|Url of the grid|
+| parameter | Type | Default value | Description |
+| --------- | ---- | ------------- | ----------- |
+| routeUrl | string | _none_ | Url of the grid |
 
 ## Example
 
@@ -32,13 +32,13 @@ class DefaultController extends Controller
      */
     public function gridAction()
     {
-        $source = new Entity('MyProjectMyBundle:User');
+        $source = new Entity('AppBundle:User');
         
         $grid->setSource($source);
 
         $grid->setRouteUrl($this->generateUrl('my_grid_route'));
         
-        return $grid->getGridResponse('MyProjectMyBundle::grid.html.twig');
+        return $grid->getGridResponse('AppBundle::grid.html.twig');
     }
 }
 ...
@@ -46,6 +46,6 @@ class DefaultController extends Controller
 
 In a twig template:
 
-```django
-{% render 'MyProjectMyBundle:Default:grid' %}
+```twig
+{% render 'AppBundle:Default:grid' %}
 ```

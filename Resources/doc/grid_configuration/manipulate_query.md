@@ -21,15 +21,15 @@ $grid->setSource($source);
 
 ### Method Source::manipulateQuery parameters
 
-|parameter|Type|Default value|Description|
-|:--:|:--|:--|:--|:--|
-|callback|[\Closure](http://php.net/manual/en/functions.anonymous.php) or [callable](http://php.net/manual/en/language.types.callable.php)|null|Callback to manipulate the query. Null means no callback.|
+| parameter | Type | Default value | Description |
+| --------- | ---- | ------------- | ----------- |
+| callback | [\Closure][1] or [callable][2] | null | Callback to manipulate the query. Null means no callback. |
 
 ### Callback parameters
 
-|parameter|Type|Description|
-|:--:|:--|:--|:--|:--|
-|query|instance of QueryBuilder|The QueryBuilder instance before its execution|
+| parameter | Type | Description |
+| --------- | ---- | ----------- | 
+| query | instance of QueryBuilder | The QueryBuilder instance before its execution |
 
 ### Examples
 
@@ -67,9 +67,7 @@ $grid->setSource($source);
 
 **Warning**: You must use "andWhere" instead of "Where" statement otherwise column filtering won't work. Same thing about the order and the group (addOrder, addGroup).
 
-
-
-if you use [Gedmo\Translatable](https://github.com/Atlantic18/DoctrineExtensions/blob/master/doc/translatable.md) with default implementation. 
+if you use [Gedmo\Translatable][3] with default implementation. 
 ```php
 <?php
 ...
@@ -99,8 +97,8 @@ For get the right translation of entities, please hint the query with :
 ```
 Now, the grid is loaded with the good translation/locale. Make sure you have a translation or you will have a empty string.
 
-
 ## 2. Injecting a custom QueryBuilder
+
 In rare situations, using the callback strategy is not possible because you do not have the full knowledge of how the query should be constructed (e.g. the business logic sits in an external repository/service). 
 In this situations, it is possible to use a remote service to create the starting initial QueryBuilder and then inject it into your grid so that the grid can base its operations on top of other business logic generated elsewhere.
 
@@ -116,9 +114,9 @@ $grid->setSource($source);
 
 ### Method Source::initQueryBuilder parameters
 
-|parameter|Type|Description|
-|:--:|:--|:--|:--|:--|
-|queryBuilder|Doctrine\ORM\QueryBuilder|(mandatory) The custom QueryBuilder which should be used for data fetching|
+| parameter | Type | Description |
+| --------- | ---- | ----------- |
+| queryBuilder | Doctrine\ORM\QueryBuilder | (mandatory) The custom QueryBuilder which should be used for data fetching |
 
 **Warning**: Please make sure you absolutely cannot use the callback method to accomplish your goals before using the injector method. In 90% of situations, the callback will lead to a cleaner and safer implementation.
 Injecting the QueryBuilder comes with the following risks -
@@ -148,3 +146,7 @@ $grid->addColumn($myCol,10);
 ```
 
 And you are all set.  From there you will be able to use the field as if it was any other field in the grid, filters and all!
+
+[1]: http://php.net/manual/en/functions.anonymous.php
+[2]: http://php.net/manual/en/language.types.callable.php
+[3]: https://github.com/Atlantic18/DoctrineExtensions/blob/master/doc/translatable.md

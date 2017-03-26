@@ -21,9 +21,9 @@ $grid->setId($id);
 ```
 ## Method parameters
 
-|parameter|Type|Default value|Description|
-|:--:|:--|:--|:--|:--|
-|id|string|_none_|Identifier of the grid|
+| parameter | Type | Default value | Description |
+| --------- | ---- | ------------- | ----------- |
+| id | string | _none_ | Identifier of the grid |
 
 ## Example
 

@@ -18,42 +18,42 @@ $grid->setDefaultFilters($filters);
 
 ## Grid::setDefaultFilters parameters
 
-|parameter|Type|Default value|Description|
-|:--:|:--|:--|:--|:--|
-|filters|array|array()|Array of array or string pair|
+| parameter | Type | Default value | Description |
+| --------- | ---- | ------------- | ----------- |
+| filters | array | array() | Array of array or string pair |
 
 ## Values for the filters parameter
 
-|parameter|Type|Default value|Description|
-|:--:|:--|:--|:--|:--|
-|operator|string|default operator of the column|Operator used to filter|
-|from|string|null|The value of the filter or the _from_ value for the between operators|
-|to|string|null|The _to_ value for the between operators|
+| parameter | Type | Default value | Description |
+| --------- | ---- | ------------- | ----------- |
+| operator | string | default operator of the column | Operator used to filter |
+| from | string | null | The value of the filter or the _from_ value for the between operators |
+| to | string | null | The _to_ value for the between operators |
 
 **Note**: If these three parameters are not defined and only a string value is defined, this value will be attributed to the _from_ value of the filter and will use the default operator of the column.
 
 ## Available Operators
 
-|Operator|Meaning|
-|:--:|:--|
-|eq|Equals|
-|neq|Not equal to|
-|lt|Lower than|
-|lte|Lower than or equal to|
-|gt|Greater than|
-|gte|Greater than or equal to|
-|like|Contains (case insensitive)|
-|nlike|Not contain (case insensitive)|
-|rlike|Starts with (case insensitive)|
-|llike|Ends with (case insensitive)|
-|slike|Contains|
-|nslike|Not contain|
-|rslike|Starts with|
-|lslike|Ends with|
-|btw|Between exclusive|
-|btwe|Between inclusive|
-|isNull|Is not defined|
-|isNotNull|Is defined|
+| Operator | Meaning |
+| -------- | ------- |
+| eq | Equals |
+| neq | Not equal to |
+| lt | Lower than |
+| lte | Lower than or equal to |
+| gt | Greater than |
+| gte | Greater than or equal to |
+| like | Contains (case insensitive) |
+| nlike | Not contain (case insensitive) |
+| rlike | Starts with (case insensitive) |
+| llike | Ends with (case insensitive) |
+| slike | Contains |
+| nslike | Not contain |
+| rslike | Starts with |
+| lslike | Ends with |
+| btw | Between exclusive |
+| btwe | Between inclusive |
+| isNull | Is not defined |
+| isNotNull | Is defined |
 
 **Note**: LIKE filter is case insensitive by default, the resulting SQL query will look like `LOWER(column) LIKE LOWER(:criteria)`.
 

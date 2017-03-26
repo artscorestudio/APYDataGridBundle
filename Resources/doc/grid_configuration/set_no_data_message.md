@@ -16,9 +16,9 @@ $grid->setNoDataMessage($noDataMessage);
 
 ## Grid::setNoDataMessage parameters
 
-|parameter|Type|Default value|Description|
-|:--:|:--|:--|:--|
-|noDataMessage|string|No data|No data message|
+| parameter | Type | Default value | Description |
+| --------- | ---- | ------------- | ----------- |
+| noDataMessage | string | No data | No data message |
 
 ## Example
 

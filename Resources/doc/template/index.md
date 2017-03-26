@@ -16,7 +16,7 @@ class DefaultController extends Controller
 
 		$grid->setSource($source);
 
-		return $grid->getGridResponse('MyProjectMyBundle::my_grid.html.twig');
+		return $grid->getGridResponse('AppBundle::my_grid.html.twig');
 	}
 	// [...]
 }
@@ -24,24 +24,24 @@ class DefaultController extends Controller
 
 And the Twig template
 
-```djanjo
-<!-- MyProjectMyBundle::grid.html.twig -->
+```twig
+<!-- AppBundle::grid.html.twig -->
 
 {{ grid(grid, theme, id, params) }}
 ```
 
 ## Grid Function Parameters Reference
 
-|parameter|Type|Default value|Description|
-|:--:|:--|:--|:--|:--|
-|grid|APY/DataGridBundle/Grid/Grid||The grid object|
-|theme|string|Template defined in configuration ([see here](overriding_internal_blocks.md#external-template))|Template used to render the grid|
-|id|string|_none_|Set the identifier of the grid.|
-|params|array|array()|Additional parameters passed to each block.|
+| parameter | Type | Default value | Description |
+| --------- | ---- | ------------- | ----------- |
+| grid | APY/DataGridBundle/Grid/Grid | - | The grid object |
+| theme | string | Template defined in configuration ([see here][1]) | Template used to render the grid |
+| id | string | _none_ | Set the identifier of the grid. |
+| params | array | array() | Additional parameters passed to each block. |
 
 ## Overriding the getGridResponse function
 
-See [Grid Response helper](../grid_configuration/grid_response.md) for a detailed outline of ```getGridResponse```.
+See [Grid Response helper][2] for a detailed outline of ```getGridResponse```.
 
 Example with two grids:
 
@@ -56,7 +56,7 @@ if ($grid->isReadyForRedirect()) {
 
     // Your code
 
-    return $this->render('MyProjectMyBundle::my_grid.html.twig', array('grid' => $grid, 'grid2' => $grid2));
+    return $this->render('AppBundle::my_grid.html.twig', array('grid' => $grid, 'grid2' => $grid2));
 }
 ...
 ```
@@ -71,3 +71,6 @@ if ($grid->isReadyForRedirect()) {
 * [Overriding internal blocks](overriding_internal_blocks.md)
 * [Display an external filters box](render_external_filters.md)
 * [Display a pagerfanta pager](render_pagerfanta_pager.md)
+
+[1]: overriding_internal_blocks.md#external-template
+[2]: ../grid_configuration/grid_response.md

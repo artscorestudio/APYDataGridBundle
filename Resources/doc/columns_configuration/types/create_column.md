@@ -34,7 +34,7 @@ In a config file, registrer your column type as a service with the tag `grid.col
 ```html
 <services>
     ...
-    <service id="grid.column.video" class="MyProject\MyBundle\Grid\Column\VideoColumn" public="false">
+    <service id="grid.column.video" class="AppBundle\Grid\Column\VideoColumn" public="false">
         <tag name="grid.column.extension" />
     </service>
     ...
@@ -111,8 +111,8 @@ class VideoColumn extends Column
 
 In your twig template:
 
-```janjo
-<!-- MyProjectMyBundle::my_grid_template.html.twig -->
+```twig
+<!-- AppBundle::my_grid_template.html.twig -->
 {% extends 'APYDataGridBundle::blocks.html.twig' %}
 
 {% block grid_column_type_video_cell %}

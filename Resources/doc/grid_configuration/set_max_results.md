@@ -14,9 +14,9 @@ $grid->setMaxResults($maxResults);
 
 ## Method parameters
 
-|parameter|Type|Default value|Description|
-|:--:|:--|:--|:--|:--|
-|maxResults|integer|null|Max items in the grid|
+| parameter | Type | Default value | Description |
+| --------- | ---- | ------------- | ----------- |
+| maxResults | integer | null | Max items in the grid |
 
 ## Example
 

@@ -14,9 +14,9 @@ $grid->setActionsColumnTitle($title);
 
 ## Grid::setActionsColumnTitle parameters
 
-|Parameter|Type|Default value|Description|
-|:--:|:--|:--|:--|
-|title|string|Actions|Title of the default actions column|
+| parameter | Type | Default value | Description |
+| --------- | ---- | ------------- | ----------- |
+| title | string | Actions | Title of the default actions column |
 
 ## Example
 

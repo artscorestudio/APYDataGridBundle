@@ -11,10 +11,10 @@ $grid->setColumnsOrder($columnIds, $keepOtherColumns);
 
 ## Grid::setColumnsOrder parameters
 
-|parameter|Type|Default value|Possible values|Description|
-|:--:|:--|:--|:--|:--|
-|columnIds|array|_none_|Ids of the columns|Order of the columns|
-|keepOtherColumns|boolean|true|true or false|Keep or not the columns not in columnIds|
+| parameter | Type | Default value | Possible values | Description |
+| --------- | ---- | ------------- | --------------- | ----------- |
+| columnIds | array | _none_ | Ids of the columns|Order of the columns |
+| keepOtherColumns | boolean | true | true or false | Keep or not the columns not in columnIds |
 
 **Note**: Don't forget to keep your primary column in columnsIds if keepOtherColumns is false.
 

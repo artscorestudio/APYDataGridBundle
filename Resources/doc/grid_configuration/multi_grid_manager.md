@@ -29,7 +29,7 @@ if ($grid->isReadyForRedirect() || $grid2->isReadyForRedirect() )
 }
 else
 {
-    return $this->render('MyProjectMyBundle::my_grid.html.twig', array('grid' => $grid, 'grid2' => $grid2));
+    return $this->render('AppBundle::my_grid.html.twig', array('grid' => $grid, 'grid2' => $grid2));
 }
 ```
 
@@ -73,7 +73,7 @@ if ($gridManager->isReadyForRedirect())
 }
 else
 {
-    return $this->render('MyProjectMyBundle::my_grid.html.twig', array('grid' => $grid, 'grid2' => $grid2));
+    return $this->render('AppBundle::my_grid.html.twig', array('grid' => $grid, 'grid2' => $grid2));
 }
 
 ```
@@ -92,7 +92,7 @@ $grid->setSource($source1);
 $grid2 = $gridManager->createGrid('second'); // same as $grid2->setId('second');
 $grid2->setSource($source1);
 
-return $gridManager->getGridManagerResponse('MyProjectMyBundle::my_grid.html.twig');
+return $gridManager->getGridManagerResponse('AppBundle::my_grid.html.twig');
 ...
 ```
 
@@ -115,7 +115,7 @@ if ($gridManager->isReadyForRedirect()) {
 
     // Your code
 
-    return $this->render('MyProjectMyBundle::my_grid.html.twig', array('grid' => $grid, 'grid2' => $grid2));
+    return $this->render('AppBundle::my_grid.html.twig', array('grid' => $grid, 'grid2' => $grid2));
 }
 ...
 ```

@@ -23,7 +23,7 @@ public function displayUserBookmarksAction()
     $grid = $this->get('grid');
 
     // Define the source of the grid
-    $source = new Entity('MyProjectMyBundle:Bookmark');
+    $source = new Entity('AppBundle:Bookmark');
 
     // Add a where condition to the query to get only bookmarks of the user
     $tableAlias = $source->getTableAlias();
@@ -52,9 +52,9 @@ $grid->setSource($source);
 
 ## Method parameters
 
-|parameter|Type|Default value|Description|
-|:--:|:--|:--|:--|:--|
-|data|array||Array of data compatible with the source.|
+| parameter | Type | Default value | Description |
+| --------- | ---- | ------------- | ----------- |
+| data | array | - | Array of data compatible with the source. |
 
 ## Example
 ```php
@@ -71,7 +71,7 @@ public function displayUserBookmarksAction()
     // Instanciate the grid
     $grid = $this->get('grid');
 
-	$source = new Entity('MyProjectMyBundle:Bookmark');
+	$source = new Entity('AppBundle:Bookmark');
 	
 	// Get bookmarks related to the user and set the grid data 
     $source->setData($user->getBookmarks());

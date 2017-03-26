@@ -4,7 +4,7 @@ Working Example
 ```php
 <?php
 
-namespace MyProject\MyBundle\Controller;
+namespace AppBundle\Controller;
 
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -30,7 +30,7 @@ class DefaultController extends Controller
 
     public function gridAction()
     {
-        $source = new Entity('MyProjectMyBundle:User');
+        $source = new Entity('AppBundle:User');
 
         /* @var $grid APY\DataGridBundle\Grid\Grid */
 
@@ -47,7 +47,7 @@ class DefaultController extends Controller
         $grid->setDefaultPage(1);
 
         // Add a mass action with static callback
-        $yourMassAction = new MassAction('Action 1', 'MyProject\MyBundle\Controller\DefaultController::myStaticMethod');
+        $yourMassAction = new MassAction('Action 1', 'AppBundle\Controller\DefaultController::myStaticMethod');
         $grid->addMassAction($yourMassAction);
 
         // Add a mass action with object callback
@@ -83,7 +83,7 @@ class DefaultController extends Controller
         $myRowAction->setColumn('info_column');
         $grid->addRowAction($myRowAction);
 
-        return $grid->getGridResponse('MyProjectMyBundle::grid.html.twig');
+        return $grid->getGridResponse('AppBundle::grid.html.twig');
     }
 }
 ```
@@ -91,7 +91,7 @@ class DefaultController extends Controller
 And the template:
 
 ```janjo
-<!-- MyProjectMyBundle::grid.html.twig -->
+<!-- AppBundle::grid.html.twig -->
 <html>
   <head>
     <meta charset="utf-8">

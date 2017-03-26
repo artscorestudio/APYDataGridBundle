@@ -18,9 +18,9 @@ $grid->hideColumns($columnIds);
 
 ## Method parameters
 
-|parameter|Type|Default value|Description|
-|:--:|:--|:--|:--|:--|
-|columnIds|string or array||List of the identifier of the columns you want to show or hide.|
+| parameter | Type | Default value | Description |
+| --------- | ---- | ------------- | ------------ |
+| columnIds | string or array | |List of the identifier of the columns you want to show or hide. |
 
 ## Example
 

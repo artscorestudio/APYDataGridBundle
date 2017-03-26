@@ -27,9 +27,9 @@ the the limit selector and pager will not be rendered.
 
 ## Method parameters
 
-|parameter|Type|Default value|Description|
-|:--:|:--|:--|:--|:--|
-|limits|string or array||Values of items per page|
+| parameter | Type | Default value | Description |
+| --------- | ---- | ------------- | ----------- |
+| limits | string or array | - | Values of items per page |
 
 ## Set default limits in your config.yml
 ```yml

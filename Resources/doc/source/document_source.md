@@ -9,7 +9,7 @@ Document source supports ODM dbal.
 
 ```php
 <?php
-namespace MyProject\MyBundle\Controller;
+namespace AppBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use APY\DataGridBundle\Grid\Source\Document;
@@ -25,23 +25,23 @@ class DefaultController extends Controller
 
         $grid->setSource($source);
         
-        return $grid->getGridResponse('MyProjectMyBundle::my_grid.html.twig');
+        return $grid->getGridResponse('AppBundle::my_grid.html.twig');
     }
 }
 ```
 
 ## Document::__construct parameters
 
-|parameter|Type|Default value|Description|
-|:--:|:--|:--|:--|:--|
-|entity|string|_none_|Entity expression. _\<ProjectName\>\<BundleName\>:\<DocumentName\>_|
-|group|string|default|Group of annotations used. See [groups parameter in annotation](../columns_configuration/annotations/column_annotation_property.md#available-attributes)|
+| parameter | Type | Default value | Description |
+| --------- | ---- | ------------- | ------------|
+| entity | string | _none_ | Entity expression. _\<ProjectName\>\<BundleName\>:\<DocumentName\>_ |
+| group | string | default | Group of annotations used. See [groups parameter in annotation][1]|
 
 ## Example
 
 ```php
 <?php
-namespace MyProject\MyBundle\Controller;
+namespace AppBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use APY\DataGridBundle\Grid\Source\Document;
@@ -50,22 +50,22 @@ class DefaultController extends Controller
 {
     public function gridAction()
     {
-        $source = new Document('MyProjectMyBundle:User');
+        $source = new Document('AppBundle:User');
 
         /* @var $grid \APY\DataGridBundle\Grid\Grid */
         $grid = $this->get('grid');
         
         $grid->setSource($source);
 
-        return $grid->getGridResponse('MyProjectMyBundle::grid.html.twig');
+        return $grid->getGridResponse('AppBundle::grid.html.twig');
     }
 }
 ```
 
 And the template:
 
-```janjo
-<!-- MyProjectMyBundle::grid.html.twig -->
+```twig
+<!-- AppBundle::grid.html.twig -->
 
 {{ grid(grid) }}
 ```
@@ -79,5 +79,7 @@ And the template:
 
 ## Unsupported features
 
-* The primary column is not filterable. (We can create a special column to manage this filter but why do you want to filter an Id ?)
-* With ascending sort, null values are displayed first. Workaround, put a high number or `zz` and bind the value with the values attributes array('zz' => '', '9999999999' => '')
+* The primary column is not filterable. (We can create a special column to manage this filter but why do you want to filter an Id ?).
+* With ascending sort, null values are displayed first. Workaround, put a high number or `zz` and bind the value with the values attributes array('zz' => '', '9999999999' => '').
+
+[1]: ../columns_configuration/annotations/column_annotation_property.md#available-attributes

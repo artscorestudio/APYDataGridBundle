@@ -16,15 +16,15 @@ $grid->setSource($source);
 
 ## Method Source::manipulateRow parameters
 
-|parameter|Type|Default value|Description|
-|:--:|:--|:--|:--|:--|
-|callback|[\Closure](http://php.net/manual/en/functions.anonymous.php) or [callable](http://php.net/manual/en/language.types.callable.php)|null|Callback to manipulate rows. Null means no callback.|
+| parameter | Type | Default value | Description |
+| --------- | ---- | ------------- | ----------- |
+| callback | [\Closure][1] or [callable][2] | null | Callback to manipulate the query. Null means no callback. |
 
 ## Callback parameters
 
-|parameter|Type|Description|
-|:--:|:--|:--|:--|:--|
-|row|instance of Row|The current row to manipulate|
+| parameter | Type | Description |
+| --------- | ---- | ----------- | 
+| row | instance of Row | The current row to manipulate |
 
 ## Examples
 
@@ -111,3 +111,6 @@ $source->manipulateRow(
 $grid->setSource($source);
 
 ```
+
+[1]: http://php.net/manual/en/functions.anonymous.php
+[2]: http://php.net/manual/en/language.types.callable.php

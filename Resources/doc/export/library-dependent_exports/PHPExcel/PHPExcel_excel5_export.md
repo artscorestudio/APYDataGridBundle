@@ -19,13 +19,13 @@ $grid->addExport(new PHPExcel5Export($title, $fileName, $params, $charset, $role
 
 #### PHPExcel5Export::__construct parameters
 
-|parameter|Type|Default value|Description|
-|:--:|:--|:--|:--|:--|
-|title|string||Title of the export in the selector.|
-|fileName|string|export|Name of the export file without the extension.|
-|params|array|array()|Additionnal parameters.|
-|charset|string|UTF-8|Charset to convert the ouput of the export.|
-|role|mixed|null|Don't add this export if the access isn't granted for the defined role(s)|
+| parameter | Type | Default value | Description |
+| --------- | ---- | ------------- | ----------- |
+| title | string | - | Title of the export in the selector. |
+| fileName | string | export | Name of the export file without the extension. |
+| params | array | array() | Additionnal parameters. |
+| charset | string | UTF-8 | Charset to convert the ouput of the export. |
+| role | mixed | null | Don't add this export if the access isn't granted for the defined role(s) |
 
 ## Additional parameters for the export
 

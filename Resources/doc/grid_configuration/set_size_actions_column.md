@@ -14,9 +14,9 @@ $grid->setActionsColumnSize($size);
 
 ## Grid::setActionsColumnSize parameters
 
-|Parameter|Type|Default value|Description|
-|:--:|:--|:--|:--|
-|size|integer||Size of the default actions column|
+| parameter | Type | Default value | Description |
+| --------- | ---- | ------------- | ----------- |
+| size | integer | - | Size of the default actions column |
 
 ## Example
 

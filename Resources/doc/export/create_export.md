@@ -14,7 +14,7 @@ We'll try to create a CSV export.
 
     ```php
     <?php
-    namespace MyProject\MyBundle\Export;
+    namespace AppBundle\Export;
 
     use APY\DataGridBundle\Grid\Export\Export;
 
@@ -42,9 +42,9 @@ We'll try to create a CSV export.
 
     ```php
     <?php
-    namespace MyProject\MyBundle\Controller;
+    namespace AppBundle\Controller;
 
-    use MyProject\MyBundle\Export\CSVExport;
+    use AppBundle\Export\CSVExport;
 
     class DefaultController extends Controller
     {
@@ -80,7 +80,7 @@ We'll try to create a CSV export.
 
     ```php
     <?php
-    namespace MyProject\MyBundle\Export;
+    namespace AppBundle\Export;
 
     use APY\DataGridBundle\Grid\Export\Export;
 
@@ -105,7 +105,7 @@ We'll try to create a CSV export.
     Try this exemple:
     ```php
     <?php
-    namespace MyProject\MyBundle\Export;
+    namespace AppBundle\Export;
 
     use APY\DataGridBundle\Grid\Export\Export;
 
@@ -188,7 +188,7 @@ We'll try to create a CSV export.
 
     ```php
     <?php
-    namespace MyProject\MyBundle\Export;
+    namespace AppBundle\Export;
 
     use APY\DataGridBundle\Grid\Export\Export;
 
@@ -223,7 +223,7 @@ We'll try to create a CSV export.
     }
     ```
     
-    Voilà, you can export your grid in a csv file.
+    Voilï¿½, you can export your grid in a csv file.
 
 7. **Additional parameters**
 
@@ -231,7 +231,7 @@ We'll try to create a CSV export.
 
     ```php
     <?php
-    namespace MyProject\MyBundle\Export;
+    namespace AppBundle\Export;
 
     use APY\DataGridBundle\Grid\Export\Export;
 

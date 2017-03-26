@@ -3,14 +3,14 @@ Getting Started With APYDataGridBundle
 
 ## Choose your source of data
 
-You can choose between an [Entity (ORM)](source/entity_source.md), a [Document (ODM)](source/document_source.md) or a [Vector (Array)](source/vector_source.md) source.
+You can choose between an [Entity (ORM)][1], a [Document (ODM)][2] or a [Vector (Array)][3] source.
 
-#### [Entity (ORM)](source/entity_source.md)
+#### [Entity (ORM)][1]
 
 ```php
 <?php
-// MyProject\MyBundle\DefaultController.php
-namespace MyProject\MyBundle\Controller;
+// AppBundle\DefaultController.php
+namespace AppBundle\Controller;
 
 use APY\DataGridBundle\Grid\Source\Entity;
 
@@ -19,18 +19,18 @@ class DefaultController extends Controller
     public function myGridAction()
     {
         // Creates simple grid based on your entity (ORM)
-        $source = new Entity('MyProjectMyBundle:MyEntity');
+        $source = new Entity('AppBundle:MyEntity');
         ...
     }
 }
 ```
 
-#### [Document (ODM)](source/document_source.md)
+#### [Document (ODM)][2]
 
 ```php
 <?php
-// MyProject\MyBundle\DefaultController.php
-namespace MyProject\MyBundle\Controller;
+// AppBundle\DefaultController.php
+namespace AppBundle\Controller;
 
 use APY\DataGridBundle\Grid\Source\Document;
 
@@ -39,18 +39,18 @@ class DefaultController extends Controller
     public function myGridAction()
     {
         // Creates simple grid based on your document (ODM)
-        $source = new Document('MyProjectMyBundle:MyDocument');
+        $source = new Document('AppBundle:MyDocument');
         ...
     }
 }
 ```
 
-#### [Vector (Array)](source/vector_source.md)
+#### [Vector (Array)][3]
 
 ```php
 <?php
-// MyProject\MyBundle\DefaultController.php
-namespace MyProject\MyBundle\Controller;
+// AppBundle\DefaultController.php
+namespace AppBundle\Controller;
 
 use APY\DataGridBundle\Grid\Source\Vector;
 
@@ -149,7 +149,7 @@ public function myGridAction()
 
     // Configuration of the grid
 
-    return $this->render('MyProjectMyBundle::grid.html.twig', array('grid' => $grid));
+    return $this->render('AppBundle::grid.html.twig', array('grid' => $grid));
     ...
 }
 ```
@@ -165,19 +165,19 @@ public function myGridAction()
 
     // Configuration of the grid
 
-    return $grid->getGridResponse('MyProjectMyBundle::grid.html.twig');
+    return $grid->getGridResponse('AppBundle::grid.html.twig');
     ...
 }
 ```
 
-See [grid response](grid_configuration/grid_response.md) for more informations.
+See [grid response][4] for more informations.
 
 ## Complete example with an entity source
 
 ```php
 <?php
-// MyProject\MyBundle\DefaultController.php
-namespace MyProject\MyBundle\Controller;
+// AppBundle\DefaultController.php
+namespace AppBundle\Controller;
 
 use APY\DataGridBundle\Grid\Source\Entity;
 
@@ -186,7 +186,7 @@ class DefaultController extends Controller
     public function myGridAction()
     {
         // Creates simple grid based on your entity (ORM)
-        $source = new Entity('MyProjectMyBundle:MyEntity');
+        $source = new Entity('AppBundle:MyEntity');
 
         // Get a grid instance
         $grid = $this->get('grid');
@@ -197,8 +197,12 @@ class DefaultController extends Controller
         // Configuration of the grid
 
         // Manage the grid redirection, exports and the response of the controller
-        return $grid->getGridResponse('MyProjectMyBundle::grid.html.twig');
+        return $grid->getGridResponse('AppBundle::grid.html.twig');
     }
 }
 ```
 
+[1]: source/entity_source.md
+[2]: source/document_source.md
+[3]: source/vector_source.md
+[4]: grid_configuration/grid_response.md

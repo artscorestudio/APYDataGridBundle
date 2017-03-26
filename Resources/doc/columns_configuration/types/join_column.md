@@ -6,8 +6,8 @@ This join column is sortable, filterable and you can also activate the 'search o
 
 By default, a disjunction (OR operator) is performed with each column.
 
-
 ## Annotation
+
 #### Inherited Attributes
 
 See [Column annotation for properties](../annotations/column_annotation_property.md).
@@ -17,9 +17,9 @@ See [Column annotation for properties](../annotations/column_annotation_property
 
 ### Additionnal attributes
 
-|Attribute|Type|Default value|Possible values|Description|
-|:--:|:--|:--|:--|:--|
-|columns|array|empty|The name of the columns|Name of the columns you want to show in this column|
+| Attribute | Type | Default value | Possible values | Description |
+| --------- | ---- | ------------- | --------------- | ----------- |
+| columns | array | empty | The name of the columns | Name of the columns you want to show in this column |
 
 **Note**: Columns listed in the `columns` attributes must be declared too.  
 
@@ -55,23 +55,23 @@ Everything.
 
 #### Available Operators
 
-|Operator|Meaning|
-|:--|--:|
-|eq|Equals|
-|neq|Not equal to|
-|lt|Lower than|
-|lte|Lower than or equal to|
-|gt|Greater than|
-|gte|Greater than or equal to|
-|like|Contains (case insensitive)|
-|nlike|Not contain (case insensitive)|
-|rlike|Starts with (case insensitive)|
-|llike|Ends with (case insensitive)|
-|slike|Contains|
-|nslike|Not contain|
-|rslike|Starts with|
-|lslike|Ends with|
-|btw|Between exclusive|
-|btwe|Between inclusive|
-|isNull|Is not defined|
-|isNotNull|Is defined|
+| Operator | Meaning |
+| -------- | ------- |
+| eq | Equals | 
+| neq | Not equal to |
+| lt | Lower than |
+| lte | Lower than or equal to |
+| gt | Greater than |
+| gte | Greater than or equal to |
+| like | Contains (case insensitive) |
+| nlike | Not contain (case insensitive) |
+| rlike | Starts with (case insensitive) |
+| llike | Ends with (case insensitive) |
+| slike | Contains |
+| nslike | Not contain |
+| rslike | Starts with |
+| lslike | Ends with |
+| btw | Between exclusive |
+| btwe | Between inclusive |
+| isNull | Is not defined |
+| isNotNull | Is defined |

@@ -13,12 +13,12 @@ The two selectors are disabled if the `Is defined` operator or the  `Is not defi
 
 #### Additionnal attributes
 
-|Attribute|Type|Default value|Possible values|Description|
-|:--:|:--|:--|:--|:--|
-|selectFrom|string|query|query, source or values|How to populate the selector of the select filters of the column.|
-|selectMulti|boolean|false|true/false|Set to true for multiple select.
-|selectExpanded|boolean|false|true/false|If sets to true, radio buttons or checkboxes (depending on the multiple value) will be rendered instead of a select element.
-|values|array|||Define the options values of the selector if selectFrom is set to `values` or if you want to replace values in the grid.|
+| Attribute | Type | Default value | Possible values | Description |
+| --------- | ---- | ------------- | --------------- | ----------- |
+| selectFrom | string | query | query, source or values | How to populate the selector of the select filters of the column. |
+| selectMulti | boolean | false | true/false | Set to true for multiple select. |
+| selectExpanded | boolean | false | true/false | If sets to true, radio buttons or checkboxes (depending on the multiple value) will be rendered instead of a select element. |
+| values | array | - | - | Define the options values of the selector if selectFrom is set to `values` or if you want to replace values in the grid. |
 
 ## selectFrom informations
 

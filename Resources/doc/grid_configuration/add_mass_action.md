@@ -20,13 +20,13 @@ $grid->addMassAction($massAction);
 
 ## Class parameters
 
-|parameter|Type|Default value|Possible values|Description|
-|:--:|:--|:--|:--|:--|
-|title|string|||Title of the mass action|
-|callback|[\Closure](http://php.net/manual/en/functions.anonymous.php) or [callable](http://php.net/manual/en/language.types.callable.php) or a controller |null||Callback to the mass action (see examples below)|
-|confirm|Boolean|false|true or false|Set to true to have a confirm message on select. (Not implemented)|
-|parameters|array|array()||Add parameters for the mass action render|
-|role|mixed|null|A symfony role|Don't add this mass action if the access isn't granted for the defined role(s)|
+| parameter | Type | Default value | Description |
+| --------- | ---- | ------------- | ----------- |
+| title | string | - | Title of the mass action |
+| callback | [\Closure][1] or [callable][2] or a controller | null | Callback to the mass action (see examples below) |
+| confirm | Boolean | false | true or false | Set to true to have a confirm message on select. (Not implemented) |
+| parameters | array | array() | Add parameters for the mass action render |
+| role | mixed | null | A symfony role | Don't add this mass action if the access isn't granted for the defined role(s) |
 
 **Note**: Every parameter has a setter and a getter method. and others options can be set too.
 
@@ -41,9 +41,9 @@ use APY\DataGridBundle\Grid\Action\MassAction;
 $grid->setSource($source);
 
 // Static class method call
-$yourMassAction = new MassAction('Action 1', 'MyProject\MyBundle\Controller\DefaultController::myStaticMethod');
+$yourMassAction = new MassAction('Action 1', 'AppBundle\Controller\DefaultController::myStaticMethod');
 // OR
-$yourMassAction = new MassAction('Action 1', array('MyProject\MyBundle\Controller\DefaultController','myStaticMethod'));
+$yourMassAction = new MassAction('Action 1', array('AppBundle\Controller\DefaultController','myStaticMethod'));
 
 $grid->addMassAction($yourMassAction);
 
@@ -76,7 +76,7 @@ use APY\DataGridBundle\Grid\Action\MassAction;
 $grid->setSource($source);
 
 // Static class method call
-$yourMassAction = new MassAction('Action 1', 'MyProject\MyBundle\Controller\DefaultController::myStaticMethod');
+$yourMassAction = new MassAction('Action 1', 'AppBundle\Controller\DefaultController::myStaticMethod');
 
 $yourMassAction->setParameters(array('param1' => $var1, 'param2' => $var2));
 
@@ -151,3 +151,5 @@ function fancyAction($primaryKeys, $allPrimaryKeys, $param1, $param2)
 	return new Response(...);
 }
 ```
+[1]: http://php.net/manual/en/functions.anonymous.php
+[2]: http://php.net/manual/en/language.types.callable.php

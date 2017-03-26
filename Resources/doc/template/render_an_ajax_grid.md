@@ -2,9 +2,10 @@ Render an ajax grid
 ===================
 
 You can load the grid with ajax interactions.  
-Simply call or extend the template `APYDataGridBundle::blocks_js.jquery.html.twig` instead of `APYDataGridBundle::blocks.html.twig`.  
-This template only works with the jQuery Javascript Framework but you can change it to manage this feature with your own Javascript Framework.
 
+Simply call or extend the template `APYDataGridBundle::blocks_js.jquery.html.twig` instead of `APYDataGridBundle::blocks.html.twig`.
+  
+This template only works with the jQuery Javascript Framework but you can change it to manage this feature with your own Javascript Framework.
 
 ## Usage
 
@@ -15,7 +16,7 @@ After: `{{ grid(data, 'APYDataGridBundle::blocks_js.jquery.html.twig') }}`
 
 #### Example
 
-```django
+```twig
 {{ grid_search(data, 'APYDataGridBundle::blocks.html.twig') }}
 
 {{ grid(data, 'APYDataGridBundle::blocks_js.jquery.html.twig') }}
