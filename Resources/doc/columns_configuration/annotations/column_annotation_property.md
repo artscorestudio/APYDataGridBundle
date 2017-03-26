@@ -39,7 +39,7 @@ class Product
 
 ## Available Attributes
 
-**If you use the `columns` attribute of the [source annotation](https://github.com/Abhoryo/APYDataGridBundle/blob/master/Resources/doc/columns_configuration/annotations/source_annotation.md), only the columns defined in this attribute can use attributes `visible` and `export` but others attributes like `filterable` and `sortable` will work even if the visible attribute is set to `false`.**
+**If you use the `columns` attribute of the [source annotation][5], only the columns defined in this attribute can use attributes `visible` and `export` but others attributes like `filterable` and `sortable` will work even if the visible attribute is set to `false`.**
 
 | Attribute | Type | Default value | Possible values | Description |
 | --------- | ---- | ------------- | --------------- | ----------- |
@@ -66,9 +66,12 @@ class Product
 | usePrefixTitle | boolean | true | true or false | Use the prefixTitle of the grid to render title |
 | translation_domain | string | null | - | The translation domain that will be used for the title |
 
-**Note 1**: Every attribute has a setter and a getter method.  
-**Note 2**: With the `values` attributes, if `type1` is found, the grid displays the value `Type 1`.  
+**Note 1**: Every attribute has a setter and a getter method.
+
+**Note 2**: With the `values` attributes, if `type1` is found, the grid displays the value `Type 1`.
+
 **Note 3**: If operators are not visible, filtering is performed with the default operator.
+
 **Note 4**: If you have and `id` field and want to use another field as primary, you need to set `primary=false` on the id field.
 
 ## Title translation
@@ -78,16 +81,15 @@ class Product
 You can use abbreviations to define different titles for the column title and the filter label in the external search box.
 
 Example with the $type variable.
-`type` will only be search for the label in the external search box.
-For the column title of the grid `type__abbr` will be search and `type` will be search if the abbrevation isn't defined.
+
+`type` will only be search for the label in the external search box. For the column title of the grid `type__abbr` will be search and `type` will be search if the abbrevation isn't defined.
 
 ### Automatic translation extraction via JMSTranslationBundle
 
-A translation extractor is included that can discover column titles defined in the annotations.  Running
-[JMSTranslationBundle][4] via the command line will automatically
-discover and catalogue titles as translation keys.
+A translation extractor is included that can discover column titles defined in the annotations. Running [JMSTranslationBundle][4] via the command line will automatically discover and catalogue titles as translation keys.
 
 [1]: ../types/text_column.md#available_operators
 [2]: http://w3schools.com/html/html5_form_input_types.asp
 [3]: http://twig.sensiolabs.org/doc/filters/escape.html
 [4]: https://github.com/schmittjoh/JMSTranslationBundle
+[5]: source_annotation.md

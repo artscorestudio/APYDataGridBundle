@@ -2,11 +2,11 @@
 
 APYDataGridBundle is a Symfony bundle for create grids for list your Entity (ORM), Document (ODM) and Vector (Array) sources. [APYDataGridBundle](https://github.com/APY/APYDataGridBundle) was initiated by **Stanislav Turza (Sorien)** and inspired by **Zfdatagrid and Magento Grid**.
 
-> You can see [CHANGELOG](CHANGELOG.md) and [UPGRADE 2.0](UPGRADE-2.0.md).
+> You can see [CHANGELOG](../CHANGELOG.md) and [UPGRADE 2.0](../UPGRADE-2.0.md).
 
 ## Prerequisites
 
-This version of the bundle requires Symfony 3.0+.
+This version of the bundle requires Symfony 2.8|3.0+.
 
 ### Translations
 

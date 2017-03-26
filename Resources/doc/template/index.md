@@ -32,10 +32,10 @@ And the Twig template
 
 ## Grid Function Parameters Reference
 
-| parameter | Type | Default value | Description |
+| Parameter | Type | Default value | Description |
 | --------- | ---- | ------------- | ----------- |
-| grid | APY/DataGridBundle/Grid/Grid | - | The grid object |
-| theme | string | Template defined in configuration ([see here][1]) | Template used to render the grid |
+| grid | APY/DataGridBundle/Grid/Grid | - | The grid object. |
+| theme | string | Template defined in configuration ([see here][1]). | Template used to render the grid. |
 | id | string | _none_ | Set the identifier of the grid. |
 | params | array | array() | Additional parameters passed to each block. |
 
@@ -47,18 +47,16 @@ Example with two grids:
 
 ```php
 <?php
-...
+// ...
 if ($grid->isReadyForRedirect()) {
     return $grid->getGridResponse();
 } elseif ($grid2->isReadyForRedirect()) {
     return $grid2->getGridResponse();
 } else {
-
     // Your code
-
     return $this->render('AppBundle::my_grid.html.twig', array('grid' => $grid, 'grid2' => $grid2));
 }
-...
+// ...
 ```
 
 **Note:** GridResponse parameters are useless in this case and exports are managed directly in the getGridResponse function.

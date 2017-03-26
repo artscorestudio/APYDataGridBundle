@@ -5,7 +5,7 @@ Getting Started With APYDataGridBundle
 
 You can choose between an [Entity (ORM)][1], a [Document (ODM)][2] or a [Vector (Array)][3] source.
 
-#### [Entity (ORM)][1]
+### Entity (ORM)
 
 ```php
 <?php
@@ -24,8 +24,9 @@ class DefaultController extends Controller
     }
 }
 ```
+[Learn more about Entity (ORM)][1].
 
-#### [Document (ODM)][2]
+### Document (ODM)
 
 ```php
 <?php
@@ -44,8 +45,9 @@ class DefaultController extends Controller
     }
 }
 ```
+[Learn more about Document (ODM)][2].
 
-#### [Vector (Array)][3]
+### Vector (Array)
 
 ```php
 <?php
@@ -77,6 +79,8 @@ class DefaultController extends Controller
     }
 }
 ```
+
+[Learn more about Vector (Array)][3].
 
 ## Get a grid instance
 
