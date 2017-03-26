@@ -32,10 +32,10 @@ class DefaultController extends Controller
 
 ## Document::__construct parameters
 
-| parameter | Type | Default value | Description |
+| Parameter | Type | Default value | Description |
 | --------- | ---- | ------------- | ------------|
-| entity | string | _none_ | Entity expression. _\<ProjectName\>\<BundleName\>:\<DocumentName\>_ |
-| group | string | default | Group of annotations used. See [groups parameter in annotation][1]|
+| entity | string | _none_ | Entity expression. _\<ProjectName\>\<BundleName\>:\<DocumentName\>_. |
+| group | string | default | Group of annotations used. See [groups parameter in annotation][1]. |
 
 ## Example
 
@@ -64,7 +64,7 @@ class DefaultController extends Controller
 
 And the template:
 
-```twig
+```django
 <!-- AppBundle::grid.html.twig -->
 
 {{ grid(grid) }}
@@ -72,10 +72,10 @@ And the template:
 
 ## Missing features
 
-* Mapped fileds (Referenced or embed)
-* GroupBy attributes and aggregate DQL functions (If someone is skilled with the mapReduce feature, contact us)
-* Array column
-* Filter doesn't work with a ODM timestamp but it is show as a date and it can be sort
+* Mapped fields (Referenced or embed).
+* GroupBy attributes and aggregate DQL functions (If someone is skilled with the mapReduce feature, contact us).
+* Array column.
+* Filter doesn't work with a ODM timestamp but it is show as a date and it can be sort.
 
 ## Unsupported features
 

@@ -30,11 +30,11 @@ class DefaultController extends Controller
 
 ## Entity::__construct parameters
 
-| parameter | Type | Default value | Description |
+| Parameter | Type | Default value | Description |
 | --------- | ---- | ------------- | ----------- |
-| entity | string | _none_ | Entity expression. _\<ProjectName\>\<BundleName\>:\<EntityName\>_ |
-| group | string | default | Group of annotations used. See [groups parameter in annotation][1] |
-| managerName | string | null | Set this value if you want to use another manager |
+| entity | string | _none_ | Entity expression. _\<ProjectName\>\<BundleName\>:\<EntityName\>_. |
+| group | string | default | Group of annotations used. See [groups parameter in annotation][1]. |
+| managerName | string | null | Set this value if you want to use another manager. |
 
 ## Example
 
@@ -63,7 +63,7 @@ class DefaultController extends Controller
 
 And the template:
 
-```twig
+```django
 <!-- AppBundle::grid.html.twig -->
 
 {{ grid(grid) }}
