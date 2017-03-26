@@ -3,12 +3,12 @@ Vector source
 
 ## Summary
 
- * [About the Vector source](#about)
- * [Create a Vector](#usage)
- * [Create a Vector without data](#nodata)
- * [Set a primary field](#set_id)
- * [Columns configuration](#columns_configuration)
- * [How the type of each column is guessed ?](#guess)
+ * [About the Vector source](#about-the-vector-source)
+ * [Create a Vector](#create-a-vector)
+ * [Create a Vector without data](#create-a-vector-without-data)
+ * [Set a primary field](#set-a-primary-field)
+ * [Columns configuration](#columns-configuration)
+ * [How the type of each column is guessed ?](#how-the-type-of-each-column-is-guessed-)
 
 ### About the Vector source
 
