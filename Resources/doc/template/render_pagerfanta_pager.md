@@ -3,7 +3,7 @@ Render a pagerfanta pager
 
 ## Installation
 
-You have to install the [pagerfanta library](https://github.com/whiteoctober/Pagerfanta) in the directory `vendor/pagerfanta/`.
+You have to install the [pagerfanta library][1] in the directory `vendor/pagerfanta/`.
 
 Then add this new library to your autoload.php file.
 
@@ -36,13 +36,13 @@ apy_data_grid:
 
 ## grid_pagerfanta function parameters
 
-|parameter|Type|Default value|Description|
-|:--:|:--|:--|:--|:--|
-|grid|APY/DataGridBundle/Grid/Grid||The grid object|
+| parameter | Type | Default value | Description |
+| --------- | ---- | ------------- | ----------- 
+| grid | APY/DataGridBundle/Grid/Grid | - | The grid object |
 
-## Example of css associated with this pager (from [Pagerfanta Github page](https://github.com/whiteoctober/Pagerfanta))
+## Example of css associated with this pager (from [Pagerfanta Github page][2])
 
-![Pagerfanta screenshot](../images/pagerfanta.png?raw=true)
+![Pagerfanta screenshot][3]
 
 ```css
 nav {
@@ -78,3 +78,7 @@ nav .disabled {
     color: #ccf;
 }
 ```
+
+[1]: https://github.com/whiteoctober/Pagerfanta
+[2]: https://github.com/whiteoctober/Pagerfanta
+[3]: ../images/pagerfanta.png?raw=true

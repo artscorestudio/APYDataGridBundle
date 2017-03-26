@@ -5,11 +5,13 @@ This column isn't linked to any field of your data but can be filled for the ren
 This column isn't sortable and filterable.
 
 ## Annotation
+
 ### Inherited Attributes
 
 See [Column annotation for properties](../annotations/column_annotation_property.md).
 
 ## Examples
+
 ### Manipulator Render in PHP
 
 ```php

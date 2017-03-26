@@ -1,9 +1,9 @@
 SUMMARY
 =======
 
-1. [Introduction](https://github.com/Abhoryo/APYDataGridBundle/blob/master/README.md)
+1. [Introduction](../../README.md)
 
-1. [Installation](installation.md)
+1. [Installation](index.md)
 
 1. [Getting Started with APYDataGridBundle](getting_started.md)
 

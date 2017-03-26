@@ -18,9 +18,9 @@ $grid->setPersistence($persistence);
 ```
 ## Method parameters
 
-|parameter|Type|Default value|Description|
-|:--:|:--|:--|:--|:--|
-|persistence|boolean|false|Persistence of the grid|
+| parameter | Type | Default value | Description |
+| --------- | ---- | ------------- | ----------- |
+| persistence | boolean | false | Persistence of the grid |
 
 ## Example
 

@@ -16,9 +16,9 @@ $grid->setNoResultMessage($noResultMessage);
 
 ## Grid::setNoResultMessage parameters
 
-|parameter|Type|Default value|Description|
-|:--:|:--|:--|:--|
-|noResultMessage|string|No result|No result message|
+| parameter | Type | Default value | Description |
+| --------- | ---- | ------------- | ----------- |
+| noResultMessage | string | No result | No result message |
 
 ## Example
 

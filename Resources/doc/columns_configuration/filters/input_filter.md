@@ -9,6 +9,6 @@ The two input fields are disabled if you select the `Is defined` and `Is not def
 
 ### Additionnal attributes for a column annotation for a property
 
-|Attribute|Type|Default value|Possible values|Description|
-|:--:|:--|:--|:--|:--|
-|inputType|string|text||Define the type of inputs. See [HTML5 input types](http://www.w3schools.com/html5/html5_form_input_types.asp)|
+| Attribute | Type | Default value | Possible values | Description |
+| --------- | ---- | ------------- | --------------- | ----------- |
+| inputType | string | text | - | Define the type of inputs. See [HTML5 input types](http://www.w3schools.com/html5/html5_form_input_types.asp) |

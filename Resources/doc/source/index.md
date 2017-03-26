@@ -1,6 +1,6 @@
 # Setting the Grid Source
 
-Your are in the Source settings for a Grid chapter. You can access to :
+Your are in the "Setting the Grid Source" chapter. You can access to :
 
 * [Entity source (ORM)](entity_source.md)
 * [Document source (ODM)](document_source.md)

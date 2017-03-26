@@ -1,17 +1,18 @@
 Filter rendering
 ================
 
-Filter rendering in the grid is handled by specific blocks in your template.  
+Filter rendering in the grid is handled by specific blocks in your template.
+
 The following parameters are passed to the block `grid_column_type_%column_type%_filter`:
 
 ## Block parameters
 
-|Parameter|Type|Description|
-|:--|:--|:--|
-|grid|APY/DataGridBundle/Grid/Grid|The grid object|
-|column|APY/DataGridBundle/Grid/Column/Colomn|The column currently being rendered|
-|submitOnChange|boolean|For select filters|
-|params|array|Additional parameters passed to the grid|
+| Parameter | Type | Description |
+| --------- | ---- | -- |
+| grid | APY/DataGridBundle/Grid/Grid | The grid object |
+| column | APY/DataGridBundle/Grid/Column/Colomn | The column currently being rendered |
+| submitOnChange | boolean | For select filters |
+| params | array | Additional parameters passed to the grid |
 
 ## Overriding block names (ordered)
 

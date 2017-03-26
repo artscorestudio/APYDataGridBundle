@@ -2,6 +2,7 @@ Add a column
 =======================
 
 You can add a column to the grid. You can fill it with the row manipulator, in your template or tell the grid what field the column will be mapped.  
+
 A column must be defined after the source otherwise it will always appear before the columns of the source.
 If negative column numbers are used, then the column is added that far from the last column.
 
@@ -35,10 +36,10 @@ See [column annotations for property](../columns_configuration/annotations/colum
 
 ## Grid::addColumn parameters
 
-|parameter|Type|Default value|Possible values|Description|
-|:--:|:--|:--|:--|:--|
-|column|instance of Column||BlankColumn(), TextColumn(), DateColumn(), BooleanColumn...||
-|position|integer|0|position >= 0|0 means last position|
+| parameter | Type | Default value | Description |
+| --------- | ---- | ------------- | ----------- |
+| column | instance of Column | - | BlankColumn(), TextColumn(), DateColumn(), BooleanColumn... |
+| position | integer | 0 | position >= 0 | 0 means last position |
 
 ## Example
 

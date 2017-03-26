@@ -38,11 +38,11 @@ return $grid->getGridResponse($view, $parameters, $response);
 
 ## Method parameters
 
-|Parameter|Type|Default value|Description|
-|:--:|:--|:--|:--|
-|view|string|null|The view name|
-|parameters|array|array()|An array of parameters to pass to the view|
-|response|Response|null|A response instance|
+| Parameter | Type | Default value | Description |
+| --------- | ---- | ------------- | ----------- |
+| view | string | null | The view name |
+| parameters | array | array() | An array of parameters to pass to the view |
+| response | Response | null | A response instance |
 
 **Note**: If you use the @Template annotation, you can define the parameters parameter in the first position (See the third example).
 
@@ -66,7 +66,7 @@ return $grid->getGridResponse();
 ...
 $grid->setSource($source);
 
-return $grid->getGridResponse('MyProjectMyBundle::my_grid.html.twig', array('param2' => $param2));
+return $grid->getGridResponse('AppBundle::my_grid.html.twig', array('param2' => $param2));
 ...
 ```
 

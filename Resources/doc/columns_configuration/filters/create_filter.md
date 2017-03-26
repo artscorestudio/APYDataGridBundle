@@ -12,7 +12,7 @@ You just have to create your template for your filter and call it in the `filter
 
 This template is the input filter but with a different name.
 
-```janjo
+```twig
 {% block grid_column_filter_type_input2 %}
 
 {# Operator #}

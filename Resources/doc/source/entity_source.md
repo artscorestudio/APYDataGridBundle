@@ -7,7 +7,7 @@ Entity source supports ORM dbal.
 
 ```php
 <?php
-namespace MyProject\MyBundle\Controller;
+namespace AppBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use APY\DataGridBundle\Grid\Source\Entity;
@@ -23,24 +23,24 @@ class DefaultController extends Controller
 
         $grid->setSource($source);
         
-        return $grid->getGridResponse('MyProjectMyBundle::my_grid.html.twig');
+        return $grid->getGridResponse('AppBundle::my_grid.html.twig');
     }
 }
 ```
 
 ## Entity::__construct parameters
 
-|parameter|Type|Default value|Description|
-|:--:|:--|:--|:--|:--|
-|entity|string|_none_|Entity expression. _\<ProjectName\>\<BundleName\>:\<EntityName\>_|
-|group|string|default|Group of annotations used. See [groups parameter in annotation](../columns_configuration/annotations/column_annotation_property.md#available-attributes)|
-|managerName|string|null|Set this value if you want to use another manager|
+| parameter | Type | Default value | Description |
+| --------- | ---- | ------------- | ----------- |
+| entity | string | _none_ | Entity expression. _\<ProjectName\>\<BundleName\>:\<EntityName\>_ |
+| group | string | default | Group of annotations used. See [groups parameter in annotation][1] |
+| managerName | string | null | Set this value if you want to use another manager |
 
 ## Example
 
 ```php
 <?php
-namespace MyProject\MyBundle\Controller;
+namespace AppBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use APY\DataGridBundle\Grid\Source\Entity;
@@ -49,22 +49,22 @@ class DefaultController extends Controller
 {
     public function gridAction()
     {
-        $source = new Entity('MyProjectMyBundle:User');
+        $source = new Entity('AppBundle:User');
 
         /* @var $grid \APY\DataGridBundle\Grid\Grid */
         $grid = $this->get('grid');
 
         $grid->setSource($source);
         
-        return $grid->getGridResponse('MyProjectMyBundle::grid.html.twig');
+        return $grid->getGridResponse('AppBundle::grid.html.twig');
     }
 }
 ```
 
 And the template:
 
-```janjo
-<!-- MyProjectMyBundle::grid.html.twig -->
+```twig
+<!-- AppBundle::grid.html.twig -->
 
 {{ grid(grid) }}
 ```
@@ -75,4 +75,7 @@ And the template:
 
 ## Known limitations
 
-* When you use a DQL fonction on a field, \*LIKE, \*NULL and REGEX operators don't work. They are disabled if your version of doctrine is < `2.5`. See [Doctrine issue](http://www.doctrine-project.org/jira/browse/DDC-1858)
+* When you use a DQL fonction on a field, \*LIKE, \*NULL and REGEX operators don't work. They are disabled if your version of doctrine is < `2.5`. See [Doctrine issue][2].
+
+[1]: ../columns_configuration/annotations/column_annotation_property.md#available-attributes
+[2]: http://www.doctrine-project.org/jira/browse/DDC-1858

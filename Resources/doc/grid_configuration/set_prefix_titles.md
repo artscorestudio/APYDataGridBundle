@@ -16,9 +16,9 @@ $grid->setPrefixTitle($prefixTitle);
 
 ## Class parameters
 
-|parameter|Type|Default value|Description|
-|:--:|:--|:--|:--|:--|
-|prefixTitle|string|_none_|Prefix title of columns|
+| parameter | Type | Default value | Description |
+| --------- | ---- | ------------- | ----------- |
+| prefixTitle | string | _none_ | Prefix title of columns |
 
 ## Example
 

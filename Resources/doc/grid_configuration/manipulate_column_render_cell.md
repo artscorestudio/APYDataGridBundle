@@ -18,17 +18,17 @@ $grid->getColumn('my_column_id')->manipulateRenderCell($callback);
 
 ## Method Column::manipulateRenderCell parameters
 
-|parameter|Type|Default value|Description|
-|:--:|:--|:--|:--|:--|
-|callback|[\Closure](http://php.net/manual/en/functions.anonymous.php) or [callable](http://php.net/manual/en/language.types.callable.php)|null|Callback to manipulate rows. Null means no callback.|
+| parameter | Type | Default value | Description |
+| --------- | ---- | ------------- | ----------- |
+| callback | [\Closure][1] or [callable][2] | null | Callback to manipulate rows. Null means no callback. |
 
 ## Callback parameters
 
-|parameter|Type|Description|
-|:--:|:--|:--|:--|:--|
-|value|string|The value of the cell|
-|row|instance of Row|The current row|
-|router|instance of the router engine|The symfony router|
+| parameter | Type | Description |
+| --------- – ---- – ----------- |
+| value | string | The value of the cell |
+| row | instance of Row | The current row |
+| router | instance of the router engine | The symfony router |
 
 ## Examples
 
@@ -64,3 +64,6 @@ $MyColumn->manipulateRenderCell(function($value, $row, $router) {
 $grid->addColumn($MyColumn);
 ...
 ```
+
+[1]: http://php.net/manual/en/functions.anonymous.php
+[2]: http://php.net/manual/en/language.types.callable.php

@@ -32,20 +32,20 @@ $grid->addColumn($actionsColumn2, $position2);
 
 ## Class ActionsColumn parameters
 
-|Parameter|Type|Default value|Description|
-|:--:|:--|:--|:--|
-|column|string||Identifier of the column|
-|title|string||Title of the column|
-|rowActions|array|array()|Array of rowAction|
-|separator|string|' '|The separator between each action|
+| parameter | Type | Default value | Description |
+| --------- | ---- | ------------- | ----------- |
+| column | string | - | Identifier of the column |
+| title | string | - | Title of the column |
+| rowActions|array|array()|Array of rowAction |
+| separator | string | ' ' | The separator between each action |
 
 **Note**: This parameter accepts HTML tags.
 
 ## Method RowAction::setColumn parameters
 
-|Parameter|Type|Default value|Description|
-|:--:|:--|:--|:--|
-|column|string||Identifier of the actions column|
+| parameter | Type | Default value | Description |
+| --------- | ---- | ------------- | ----------- |
+| column | string | - | Identifier of the actions column |
 
 Example:
 ```php

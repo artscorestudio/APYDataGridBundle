@@ -5,8 +5,7 @@ You can perform some aggregate DQL functions on any field.
 
 Notation: `<field_id>:<aggregate_function>:<parameters>`
 
-You have 5 basic aggregate functions: `count`, `avg`, `min`, `max` and `sum` but you can also use other DQL defined functions like the `GroupConcat` or `CountIf` DQL function if you install it. ([Source](https://github.com/beberlei/DoctrineExtensions/blob/master/lib/DoctrineExtensions/Query/Mysql/))
-
+You have 5 basic aggregate functions: `count`, `avg`, `min`, `max` and `sum` but you can also use other DQL defined functions like the `GroupConcat` or `CountIf` DQL function if you install it. ([Source][1]).
 
 ```php
 <?php
@@ -58,7 +57,8 @@ class Sale
 
 **Note**: When a function notation is detected, a groupBy is automatically performed on the primary field of the parent entity if no groupBy attribute is defined in the Source annotation.
 
-**Warning**: Doctrine have a limitation. When you filter on a column with a DQL function, a HAVING clause is added to the query.  
+**Warning**: Doctrine have a limitation. When you filter on a column with a DQL function, a HAVING clause is added to the query. 
+ 
 Example: `SELECT _p.member_id, COUNT(_p) FROM Photo _p GROUP BY _p.member_id HAVING COUNT(_p) > 3`  
 But the HAVING clause supports DQL function only with comparison operator (=, <, <=, <>, >, >=, !=).  
 Due to this limitation, the selector of operators will displayed with only the supported operators.
@@ -103,3 +103,5 @@ class Article {
 `sales.name:otherFunction:string` turns into `otherFunction(_sales.name, 'string')` in DQL
 
 `other:count:distinct` turns into `count(DISTINCT _a.other)` in DQL
+
+[1]: https://github.com/beberlei/DoctrineExtensions/blob/master/lib/DoctrineExtensions/Query/Mysql/

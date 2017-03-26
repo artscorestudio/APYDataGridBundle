@@ -2,6 +2,7 @@ Vector source
 =============
 
 # Summary
+
  * [About the Vector source](#about)
  * [Create a Vector](#usage)
  * [Create a Vector without data](#nodata)
@@ -9,7 +10,7 @@ Vector source
  * [Columns configuration](#columns_configuration)
  * [How the type of each column is guessed ?](#guess)
 
-<a name="about"/>
+<a name="about" />
 ## About the Vector source
 
 The vector source come handy if you have to handle some data that doesn't match your bundle's entities

@@ -33,7 +33,7 @@ See [CHANGELOG](https://github.com/APY/APYDataGridBundle/blob/master/CHANGELOG.m
 
 ## Documentation
 
-See the [summary](https://github.com/APY/APYDataGridBundle/blob/master/Resources/doc/summary.md).
+See the [summary](Resources/doc/summary.md).
 
 ## Screenshot
 

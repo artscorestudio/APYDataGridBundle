@@ -17,16 +17,16 @@ $grid->addRowAction($rowAction);
 
 ## Method RowAction::manipulateRender parameters
 
-|parameter|Type|Default value|Description|
-|:--:|:--|:--|:--|:--|
-|callback|[\Closure](http://php.net/manual/en/functions.anonymous.php) or [callable](http://php.net/manual/en/language.types.callable.php)|null|Callback to manipulate action rendering. Null means no callback.|
+| parameter | Type | Default value | Description |
+| --------- | ---- | ------------- | ----------- |
+| callback | [\Closure][1] or [callable][2] | null | Callback to manipulate the query. Null means no callback. |
 
 ## Callback parameters
 
-|parameter|Type|Description|
-|:--:|:--|:--|:--|:--|
-|action|instance of RowAction|The action|
-|row|instance of Row|The current row|
+| parameter | Type | Description |
+| --------- | ---- | ----------- |
+| action | instance of RowAction | The action |
+| row | instance of Row | The current row |
 
 ## Action disabling
 
@@ -60,3 +60,6 @@ $rowAction->manipulateRender(
 $grid->addRowAction($rowAction);
 ...
 ```
+
+[1]: http://php.net/manual/en/functions.anonymous.php
+[2]: http://php.net/manual/en/language.types.callable.php

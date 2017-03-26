@@ -17,17 +17,17 @@ $grid->setDefaultOrder($columnId, $order);
 
 ## Grid::setDefaultOrder parameters
 
-|parameter|Type|Default value|Possible values|Description|
-|:--:|:--|:--|:--|:--|
-|columnId|string|_none_||Identifier of the column|
-|order|string|asc|asc or desc|Order of the column|
+| parameter | Type | Default value | Possible values | Description |
+| --------- | ---- | ------------- | --------------- | ----------- |
+| columnId | string | _none_ | - | Identifier of the column |
+| order | string | asc | asc or desc | Order of the column |
 
 ## Available Order
 
-|Order|Meaning|
-|:--:|:--|
-|asc|Ascending|
-|desc|Descending|
+| Order | Meaning |
+| ----- | -- |
+| asc | Ascending |
+| desc | Descending |
 
 ## Example
 ```php

@@ -5,6 +5,7 @@ This column show the rank of a row in the grid with filters.
 This column isn't sortable and filterable.
 
 ## Annotation
+
 ### Inherited Attributes
 
 See [Column annotation for properties](../annotations/column_annotation_property.md).
