@@ -2,11 +2,11 @@
 
 APYDataGridBundle is a Symfony bundle for create grids for list your Entity (ORM), Document (ODM) and Vector (Array) sources. [APYDataGridBundle](https://github.com/APY/APYDataGridBundle) was initiated by **Stanislav Turza (Sorien)** and inspired by **Zfdatagrid and Magento Grid**.
 
-> You can see [CHANGELOG](../CHANGELOG.md) and [UPGRADE 2.0](../UPGRADE-2.0.md).
+> You can see [CHANGELOG](CHANGELOG.md) and [UPGRADE 2.0](UPGRADE-2.0.md).
 
 ## Prerequisites
 
-This version of the bundle requires Symfony 2.8|3.0+.
+This version of the bundle requires Symfony 3.0+.
 
 ### Translations
 
@@ -55,7 +55,7 @@ public function registerBundles()
 
 ```php
 <?php
-namespace AppBundle\Controller;
+namespace MyProject\MyBundle\Controller;
 
 use APY\DataGridBundle\Grid\Source\Entity;
 
@@ -64,7 +64,7 @@ class DefaultController extends Controller
 	public function myGridAction()
 	{
 		// Creates a simple grid based on your entity (ORM)
-		$source = new Entity('AppBundle:MyEntity');
+		$source = new Entity('MyProjectMyBundle:MyEntity');
 		
 		// Get a Grid instance
 		$grid = $this->get('grid');
@@ -73,7 +73,7 @@ class DefaultController extends Controller
 		$grid->setSource($source);
 		
 		// Return the response of the grid to the template
-		return $grid->getGridResponse('AppBundle::myGrid.html.twig');
+		return $grid->getGridResponse('MyProjectMyBundle:myGrid.html.twig');
 	}
 }
 ```
@@ -82,7 +82,7 @@ class DefaultController extends Controller
 
 ```php
 <?php
-namespace AppBundle\Entity
+namespace MyProject\MyBundle\Entity
 
 use Doctrine\ORM\Mapping as ORM;
 use APY\DataGridBundle\Grid\Mapping as GRID;
@@ -107,7 +107,7 @@ class MyEntity
 #### Display the grid in a Twig template
 
 ```twig
-<!-- AppBundle/Resources/views/myGrid.html.twig -->
+<!-- MyProject\MyBundle\Resources\views\myGrid.html.twig -->
 {{ grid(grid) }}
 ```
 

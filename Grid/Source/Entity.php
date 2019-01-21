@@ -28,6 +28,9 @@ use Symfony\Component\HttpKernel\Kernel;
 
 class Entity extends Source
 {
+    const DOT_DQL_ALIAS_PH = '__dot__';
+    const COLON_DQL_ALIAS_PH = '__col__';
+
     /**
      * @var \Doctrine\ORM\EntityManager
      */
@@ -213,7 +216,7 @@ class Entity extends Source
                 }
             }
 
-            $alias = str_replace('.', '::', $column->getId());
+            $alias = $this->fromColIdToAlias($column->getId());
         } elseif (strpos($name, ':') !== false) {
             $previousParent = $this->getTableAlias();
             $alias = $name;
@@ -251,6 +254,16 @@ class Entity extends Source
         }
 
         return $name;
+    }
+
+    /**
+     * @param string $colId
+     *
+     * @return string
+     */
+    private function fromColIdToAlias($colId)
+    {
+        return str_replace(['.', ':'], [self::DOT_DQL_ALIAS_PH, self::COLON_DQL_ALIAS_PH], $colId);
     }
 
     /**
@@ -352,10 +365,10 @@ class Entity extends Source
      */
     protected function getQueryBuilder()
     {
-        //If a custom QB has been provided, use that
+        //If a custom QB has been provided, use a copy of that one
         //Otherwise create our own basic one
         if ($this->queryBuilder instanceof QueryBuilder) {
-            $qb = $this->queryBuilder;
+            $qb = clone $this->queryBuilder;
         } else {
             $qb = $this->manager->createQueryBuilder($this->class);
             $qb->from($this->class, $this->getTableAlias());
@@ -515,6 +528,7 @@ class Entity extends Source
             $query->setHint($hintKey, $hintValue);
         }
         $items = new Paginator($query, $hasJoin);
+        $items->setUseOutputWalkers(false);
 
         $repository = $this->manager->getRepository($this->entityName);
 
@@ -535,7 +549,7 @@ class Entity extends Source
             $row = new Row();
 
             foreach ($item as $key => $value) {
-                $key = str_replace('::', '.', $key);
+                $key = $this->fromAliasToColId($key);
 
                 if (in_array($key, $serializeColumns) && is_string($value)) {
                     $value = unserialize($value);
@@ -550,12 +564,22 @@ class Entity extends Source
             $row->setRepository($repository);
 
             //call overridden prepareRow or associated closure
-            if (($modifiedRow = $this->prepareRow($row)) != null) {
+            if (($modifiedRow = $this->prepareRow($row)) !== null) {
                 $result->addRow($modifiedRow);
             }
         }
 
         return $result;
+    }
+
+    /**
+     * @param string $alias
+     *
+     * @return string
+     */
+    private function fromAliasToColId($alias)
+    {
+        return str_replace([self::DOT_DQL_ALIAS_PH, self::COLON_DQL_ALIAS_PH], ['.', ':'], $alias);
     }
 
     public function getTotalCount($maxResults = null)
@@ -581,7 +605,7 @@ class Entity extends Source
             $countQuery->setHint(CountWalker::HINT_DISTINCT, true);
         }
 
-        if ($countQuery->getHint(Query::HINT_CUSTOM_OUTPUT_WALKER) == false) {
+        if ($countQuery->getHint(Query::HINT_CUSTOM_OUTPUT_WALKER) === false) {
             $platform = $countQuery->getEntityManager()->getConnection()->getDatabasePlatform(); // law of demeter win
 
             $rsm = new ResultSetMapping();
@@ -701,7 +725,9 @@ class Entity extends Source
 
                 $values = [];
                 foreach ($result as $row) {
-                    $value = $row[str_replace('.', '::', $column->getId())];
+                    $alias = $this->fromColIdToAlias($column->getId());
+
+                    $value = $row[$alias];
 
                     switch ($column->getType()) {
                         case 'array':
