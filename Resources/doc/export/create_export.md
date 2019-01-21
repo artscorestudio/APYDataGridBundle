@@ -2,6 +2,7 @@ Create an export
 ================
 
 This bundle proposes native exports such as a CSV or a JSON export and library-dependent exports such as Excel and PDF exports but everything is made that it is really easy to create your own export.  
+
 When some exports are defined, a selector is displayed with an export button.
 
 **Note**: An export don't export mass action and row actions columns.
@@ -66,15 +67,12 @@ class DefaultController extends Controller
 And the template:
 
 ```janjo
-<!-- MyProjectMyBundle::grid.html.twig -->
+<!-- AppBundle::grid.html.twig -->
 
 {{ grid(grid) }}
 ```
 
-That's all. You can test your export.  
-Go to your controller page.  
-Select `CSV Export` in the export selector and click the export button.  
-A download window appears and... yes, you have a file with the name `export` with no extension and no content.
+That's all ! You can test your export. Go to your controller page and select `CSV Export` in the export selector and click the export button. A download window appears and... yes ! You have a file with the name `export` with no extension and no content.
 
 3. **Define the extension and the mime type of your export.**
 
