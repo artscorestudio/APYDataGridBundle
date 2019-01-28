@@ -20,7 +20,7 @@ $grid->addExport(new XMLExport($title, $fileName, $params, $charset, $role));
 
 | parameter | Type | Default value | Description |
 | --------- | ---- | ------------- | ----------- |
-| title | string | - | Title of the export in the selector. |
+| title | string |  | Title of the export in the selector. |
 | fileName | string | export | Name of the export file without the extension. |
 | params | array | array() | Additionnal parameters. |
 | charset | string | UTF-8 | Charset to convert the ouput of the export. |

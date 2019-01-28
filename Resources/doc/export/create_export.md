@@ -11,7 +11,7 @@ When some exports are defined, a selector is displayed with an export button.
 
 We'll try to create a CSV export.
 
-1. **Create a class wherever you want and extend it with the Export class of the bundle.**
+### 1. Create a class wherever you want and extend it with the Export class of the bundle.
 
 ```php
 <?php
@@ -34,12 +34,12 @@ class CSVExport extends Export
 
 | parameter | Type   | Default value | Description                                    |
 | --------- | ------ | ------------- | ---------------------------------------------- |
-| title     | string | -             | Title of the export in the selector.           |
+| title     | string |               | Title of the export in the selector.           |
 | fileName  | string | export        | Name of the export file without the extension. |
 | params    | array  | array()       | Additionnal parameters.                        |
 | charset   | string | UTF-8         | Charset to convert the ouput of the export.    |
 
-2. **Add this export to the grid in your controller**
+### 2. Add this export to the grid in your controller
 
 ```php
 <?php
@@ -66,7 +66,7 @@ class DefaultController extends Controller
 
 And the template:
 
-```janjo
+```twig
 <!-- AppBundle::grid.html.twig -->
 
 {{ grid(grid) }}
@@ -74,7 +74,7 @@ And the template:
 
 That's all ! You can test your export. Go to your controller page and select `CSV Export` in the export selector and click the export button. A download window appears and... yes ! You have a file with the name `export` with no extension and no content.
 
-3. **Define the extension and the mime type of your export.**
+### 3. Define the extension and the mime type of your export.
 
 ```php
 <?php
@@ -95,9 +95,9 @@ class CSVExport extends Export
 }
 ```
 
-4. **Define the content of the export.**
+### 4. Define the content of the export.
 
-The computeData method is the front door of an export. The grid calls this method with itself as argument.  
+The `computeData` method is the front door of an export. The grid calls this method with itself as argument.  
 The purpose of this method is to fill the content of the export.
 
 Try this exemple:
@@ -120,9 +120,9 @@ class CSVExport extends Export
 }
 ```
 
-Now you have a export with a filename `export.csv` and the content `Hello world!`
+Now you have an export with a filename `export.csv` and the content `Hello world!`
 
-5. **Get the grid data to fill the content of the export**
+### 5. Get the grid data to fill the content of the export
 
 The export class have some helper functions to get the data of the grid.
 
@@ -180,9 +180,9 @@ array(
 )
 ```
 
-Available methods: Export::getGridTitles, Export::getRawGridTitles, Export::getGridRows and Export::getRawGridRows
+Available methods: `Export::getGridTitles`, ̀ Export::getRawGridTitles`, `Export::getGridRows` and `Export::getRawGridRows`.
 
-6.  **Fill the content of the export**
+### 6.  Fill the content of the export
 
 ```php
 <?php
@@ -221,9 +221,9 @@ class CSVExport extends Export
 }
 ```
 
-Voil�, you can export your grid in a csv file.
+Voilà, you can export your grid in a csv file.
 
-7. **Additional parameters**
+### 7. Additional parameters
 
 In French - for instance - Microsoft Excel accepts only CSV with the delimiter semi-colon `;`. You can add an additional parameter to resolve this difference.
 
@@ -282,7 +282,7 @@ $grid->addExport(new CSVExport('CSV Export in French', 'export', array('delimite
 ...
 ```
 
-8. **Define the charset of the export file**
+### 8. Define the charset of the export file
 
 In French - for instance again - Microsoft Excel doesn't displayed correctly special characters. To resolve this problem, you have to define the charset of your export file.
 
